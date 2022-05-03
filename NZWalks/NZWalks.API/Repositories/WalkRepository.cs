@@ -17,9 +17,16 @@ namespace NZWalks.API.Repositories
             // Assign new ID
 
             walk.Id = new Guid();
+
+            // Create new walk
             
             await _DbContext.Walks.AddAsync(walk);
+
+            // Save changes to DB
+
             await _DbContext.SaveChangesAsync();
+
+            // Return new walk difficulty to API controller
 
             return walk;
         }

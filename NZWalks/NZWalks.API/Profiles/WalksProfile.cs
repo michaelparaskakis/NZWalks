@@ -2,9 +2,9 @@
 
 namespace NZWalks.API.Profiles
 {
-    public class WalksProfile : Profile
+    public class WalkDifficultyProfile : Profile
     {
-        public WalksProfile()
+        public WalkDifficultyProfile()
         {
             CreateMap<Models.Domain.Walk, Models.DTO.Walk>().ReverseMap();
 
